@@ -23,28 +23,69 @@
             <span> Automate This !</span>
          </div>
       </div>
-   
-   <h1 > BICYCLE RIDING </h1>
-   <div class="row" >
-      <form name="myForm">
-         <div class="keywords">
-            <div   data-ng-repeat="k in keywords" class="col-sm-3" >
-               <input class="word"  name ={{k.name}} type={{k.type}} placeholder={{k.ph}} data-ng-model="k.value" required ng-minlength="2" ng-pattern="/^a/">
-            </div>
-            
-         </div>
-      </form>
 
-         <div class="col-sm-4">
-            <button  class="submit"  ng-click="save()">Generate MadLibs </button>
-         </div>
-        </div>
-      </div>
+      <h1 > nG MAD LIBS </h1>
+     
+            <form name="myForm" class="keywords" ng-submit="submitForm(myForm.$valid)" novalidate>
+               <div class="row" >
+               <div class="col-sm-4" >
+               <div class="form-group" ng-class="{ 'has-error' : myForm.maleName.$invalid && !myForm.maleName.$pristine }">
+                  <input  id="maleName" ng-model="maleName" name="maleName" placeholder="maleName" required/>
+                  <p ng-show="myForm.maleName.$invalid && !myForm.maleName.$pristine" class="help-block">You name is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.dirtyTask.$invalid && !myForm.dirtyTask.$pristine }">
+               <input  id="dirtyTask" ng-model="dirtyTask" name="dirtyTask"  placeholder="dirtyTask" required/>
+               <p ng-show="myForm.dirtyTask.$invalid && !myForm.dirtyTask.$pristine" class="help-block">dirt Task is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.obnauxiousCelebrity.$invalid && !myForm.obnauxiousCelebrity.$pristine }">
+               <input  id="obnauxiousCelebrity" ng-model="obnauxiousCelebrity" name="obnauxiousCelebrity"  placeholder="obnauxiousCelebrity" required/>
+               <p ng-show="myForm.obnauxiousCelebrity.$invalid && !myForm.obnauxiousCelebrity.$pristine" class="help-block">obnauxiousCelebrity is required.</p>
+               </div>
+               </div>
+               
+               <div class="col-sm-4" >
+               <div class="form-group" ng-class="{ 'has-error' : myForm.jobTitle.$invalid && !myForm.jobTitle.$pristine }">
+                <input  id="jobTitle" ng-model="jobTitle"  name="jobTitle" placeholder="jobTitle"  required/>
+               <p ng-show="myForm.jobTitle.$invalid && !myForm.jobTitle.$pristine" class="help-block">jobTitle is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.celebrity.$invalid && !myForm.celebrity.$pristine }">
+                <input  id="celebrity" ng-model="celebrity"  name="celebrity" placeholder="celebrity"  required/>
+               <p ng-show="myForm.celebrity.$invalid && !myForm.celebrity.$pristine" class="help-block">celebrity is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.hugeNumber.$invalid && !myForm.hugeNumber.$pristine }">
+               <input  id="huge Number" ng-model="hugeNumber" name="hugeNumber" placeholder="hugeNumber" required /> 
+               <p ng-show="myForm.hugeNumber.$invalid && !myForm.hugeNumber.$pristine" class="help-block">hugeNumber is required.</p>
+               </div>
+               </div>   
+               <div class="col-sm-4" >
+               <div class="form-group" ng-class="{ 'has-error' : myForm.tediousTask.$invalid && !myForm.tediousTask.$pristine }">
+               <input  id="tediousTask" ng-model="tediousTask"   name="tediousTask"  placeholder="tediousTask" required />
+               <p ng-show="myForm.tediousTask.$invalid && !myForm.tediousTask.$pristine" class="help-block">tediousTask is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.uselessSkill.$invalid && !myForm.uselessSkill.$pristine }">
+               <input  id="uselessSkill" ng-model="uselessSkill"  name="uselessSkill" placeholder="uselessSkill" required />
+               <p ng-show="myForm.uselessSkill.$invalid && !myForm.uselessSkill.$pristine" class="help-block">uselessSkill is required.</p>
+               </div>
+               <div class="form-group" ng-class="{ 'has-error' : myForm.adjective.$invalid && !myForm.adjective.$pristine }">
+               <input  id="adjective" ng-model="adjective" name="adjective" placeholder="adjective" required />
+               <p ng-show="myForm.adjective.$invalid && !myForm.adjective.$pristine" class="help-block">adjective is required.</p>
+               </div>
+               </div>   
+               </div>
+               <div class="row" >
+         <div class="col-sm-8" >
+              <button type="submit" class="btn btn-primary"  ng-disabled="myForm.$invalid">Submit</button>
+              </div>
+              </div>
+            </form>
+        
+    
       <div class="row">
-         <div  ng-hide="myVar"  class="words" class="col-sm-6">
-            <p>
-               Most doctors agree that bicycle <span>{{keywords[0].value}}</span> .is a <span>{{keywords[1].value}}</span> form of exercise that benefits<span>{{keywords[2].value}}</span> .of all ages.Riding a bicycle enables you to develop your <span>{{keywords[3].value}}</span> .muscles as well as <span>{{keywords[4].value}}</span> .increase the rate of your <span>{{keywords[5].value}}</span> beat. Bicycle riding is also a <span>{{keywords[6].value}}</span> .means of <span>{{keywords[7].value}}</span> .More <span>{{keywords[8].value}}</span> .around the world <span>{{keywords[9].value}}</span> .bicycles than drive <span>{{keywords[10].value}}</span> . No matter what kind of <span>{{keywords[11].value}}</span> .you ride,always be sure to wear a <span>{{keywords[12].value}}</span> .on your head and have reflectors on your <span>{{keywords[13].value}}</span> , especially if you <span>{{keywords[14].value}}</span>  .at night.
-            </p>
+         <div  ng-show="myVar"  class="summary" class="col-sm-6">
+           
+               {{maleName}} was a {{jobTitle}} who loved technology.Although he loved parts of his job , he absolutely hated {{tediousTask}} and {{dirtyTask}},So {{maleName}} met with his life mentor {{celebrity}} who told him to how to {{uselessSkill}} with Thinkful.Thinkful did not offer a course on {{uselessSkill}} so he studied programmign instead.
+               What a great decision !!! With his new skills {{maleName}} built a(n) {{adjective}} robot named {{obnauxiousCelebrity}} that not only loved  {{dirtyTask}} but did it {{hugeNumber}} faster.
+       
          </div>
       </div>
    </body>

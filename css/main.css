@@ -1,31 +1,40 @@
- .logo {
-     padding-left: 12em;
- }
- .mast-head {
-     margin-left: 50em;
- }
- .happy-face {
-     padding-left: 25em;
-     width: 100px;
-     height: 100%;
- }
- .submit {
-     margin-left: 30em;
-    margin-top:2em;
-     padding: 1em;
-     background: yellow;
- }
- .word {
-     margin-left: 40px;
-     margin-top: 10px;
-     margin-bottom: 10px;
-     margin-right: 10px;
-     padding: 10px;
-     height: 10px;
-     color:black;
- }
- .keywords{
- 	width: 80em;
+.has-error{
+
+color:red;
+
+}
+
+button{
+     margin-left:35em;
+}
+
+  .logo {
+    padding-left: 12em;
+}
+.mast-head {
+    margin-left: 50em;
+}
+.happy-face {
+    padding-left: 25em;
+    width: 100px;
+    height: 100%;
+}
+.submit {
+    margin: 2em 50em;
+    padding: 1em;
+    background: yellow;
+}
+.word {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    height: 10px;
+    color:black;
+}
+.keywords{
+     width: 80em;
 height: 300px;
 border: 1px solid #00F;
 box-sizing: border-box;
@@ -33,22 +42,38 @@ background-color: #000;
 margin-top: 2em;
 margin-left: 10em;
 
- }
- p {
-     white-space: pre-wrap;
-     margin-left: 100px;
-     margin-right: 100px;
-     border: 1px solid blue;
-     box-sizing: border-box;
-     background: pink;
-     margin-top: 10px;
-     padding: 10px;
-     font-size: 2em;
- }
- span {
-     text-decoration: underline;
- }
- h1{
- 	margin-left: 15em;
+}
 
- }
+input{
+    margin: 1em;
+}
+
+
+.summary{
+    white-space: pre-wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    background: pink;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+span {
+    text-decoration: underline;
+    color:white;
+
+}
+h1{
+     margin-left: 15em;
+
+}
+
+
+.my-form {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  background: transparent;
+  display:inline;
+}
